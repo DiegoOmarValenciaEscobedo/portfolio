@@ -1,4 +1,5 @@
 import { createTheme} from '@mui/material/styles';
+import { Timeline } from '@mui/lab';
 
 
 const theme = createTheme({
@@ -14,13 +15,18 @@ const theme = createTheme({
           default: '#d9d9d9',
           paper: '#343960',
         },
+        timeline: {
+          main: '#343960',
+        },
     },
     typography: {
       fontFamily: [
         'Montserrat',
-        'sans-serif',
       ].join(','),
-      fontSize: 13,
+      fontSize: 12,
+      infoSize: 16,
+      titleSize: 22,
+      navbarSize: 15,
     },
 });
 

@@ -8,24 +8,21 @@ import MyWork from './components/MyWork';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Education from './components/Education';
-import Experience from './components/Experience';
 
 export default function App() {
 
   const theme = useTheme();
   const classes = useStyles();
-  console.log(theme.palette.background.default);
   return (
     <>
       <Navbar />
       <div className={classes.content}>
-        <Home id={'home'} title={'Home'}/>
-        <About id={'about'} title={'About me'}/>
-        <Skills id={'skills'} title={'My Coding Journey'}/>
-        <Education id={'education'} title={'Education'}/>
-        <Experience id={'experience'} title={'Experience'}/>
-        <MyWork id={'work'} title={'My Work'}/>
-        <Contact id={'contact'} title={'Get in touch'}/> 
+        <Home id={'home'}/>
+        <About id={'about'}/>
+        <Skills id={'skills'}/>
+        <Education id={'education'}/>
+        <MyWork id={'work'}/>
+        <Contact id={'contact'}/> 
       </div> 
     </>
   )
@@ -34,9 +31,11 @@ export default function App() {
 
 const useStyles = makeStyles((theme) => ({
   content: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    textAlign: 'center',
+    display: 'flex',
     paddingTop: '4rem',
+    textAlign: 'center',
+    alignItems: 'center',
+    flexDirection: 'column',
+    justifyContent: 'center',
   }
 }));
